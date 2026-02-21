@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+sqlalchemy
+psycopg2-binary
+redis
+pydantic
+python-dotenv
+sentence-transformers
+faiss-cpu
+groq
+passlib[bcrypt]
+python-multipart
