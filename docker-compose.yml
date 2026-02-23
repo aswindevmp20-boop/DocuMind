@@ -13,7 +13,7 @@ services:
       - .env
 
   db:
-    image: postgres:15
+    image: pgvector/pgvector:pg15
     container_name: documind_db
     environment:
       POSTGRES_DB: documind
@@ -23,3 +23,12 @@ services:
   redis:
     image: redis:7
     container_name: documind_redis
+
+  worker:
+    build: .
+    command: python -m app.workers.query_worker
+    depends_on:
+      - db
+      - redis
+    env_file:
+      - .env

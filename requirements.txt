@@ -10,3 +10,5 @@ faiss-cpu
 groq
 passlib[bcrypt]
 python-multipart
+PyPDF2
+pgvector
